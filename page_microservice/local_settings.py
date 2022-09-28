@@ -19,7 +19,7 @@ DATABASES = {
         "PASSWORD": "kultivate",
         # Set to empty string for localhost. Not used with sqlite3.
         #"HOST": "$REMOTE_POSTGRES_IP",
-        "HOST": "database_host",
+        "HOST": "34.197.170.96",
         # Set to empty string for default. Not used with sqlite3.
         "PORT": "5432",
     }
@@ -30,7 +30,9 @@ ALLOWED_HOSTS = ["localhost", "127.0.0.1", "::1", '*']
 
 # PROJECT_ROOT = '/opt/farmer_ms_assets/'
 
-STATIC_ROOT = os.path.join('/opt/page_ms_assets/', STATIC_URL.strip("/"))
+STATIC_ROOT = os.path.join('/opt/page_ms_assets/',
+
+STATIC_URL.strip("/"))
 
 MEDIA_URL = STATIC_URL + "media/"
 
