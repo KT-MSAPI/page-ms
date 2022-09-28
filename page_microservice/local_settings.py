@@ -1,6 +1,6 @@
 # This file is exec'd from settings.py, so it has access to and can
 # modify all the variables in settings.py.
-
+import os
 DEBUG = True
 
 # Make these unique, and don't share it with anybody.
@@ -30,14 +30,11 @@ ALLOWED_HOSTS = ["localhost", "127.0.0.1", "::1", '*']
 
 # PROJECT_ROOT = '/opt/farmer_ms_assets/'
 
-STATIC_ROOT = os.path.join('/opt/page_ms_assets/',
-
-STATIC_URL.strip("/"))
-
-MEDIA_URL = STATIC_URL + "media/"
-
-MEDIA_ROOT = os.path.join('/opt/page_ms_assets/', *MEDIA_URL.strip("/").split("/"))
-
+DATA_DIR = os.path.dirname(os.path.dirname(__file__))
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
+STATIC_ROOT = os.path.join(DATA_DIR, 'static')
 
 # STATICFILES_DIRS = (
 #     os.path.join('/opt/static/', 'pincode_admin', 'static'),
