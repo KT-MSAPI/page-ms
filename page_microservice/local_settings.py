@@ -19,7 +19,7 @@ DATABASES = {
         "PASSWORD": "kultivate",
         # Set to empty string for localhost. Not used with sqlite3.
         #"HOST": "$REMOTE_POSTGRES_IP",
-        "HOST": "kt-prod-db.cztors7rsl8b.us-east-1.rds.amazonaws.com",
+        "HOST": "kt-prod-db.cgsoupmv1lrk.ap-south-1.rds.amazonaws.com",
         # Set to empty string for default. Not used with sqlite3.
         "PORT": "5432",
     }
