@@ -2,8 +2,10 @@
 # pull official base image
 FROM python:3.8
 
+RUN mkdir -p /opt/pip_cache
+RUN mkdir -p /opt/pagems-assets && chmod -R 777 /opt/
 # set work directory
-WORKDIR /page-ms
+WORKDIR /opt/page-ms
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1

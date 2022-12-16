@@ -30,11 +30,13 @@ ALLOWED_HOSTS = ["localhost", "127.0.0.1", "::1", '*']
 
 # PROJECT_ROOT = '/opt/farmer_ms_assets/'
 
-DATA_DIR = os.path.dirname(os.path.dirname(__file__))
+#static & Media 
 STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
-STATIC_ROOT = os.path.join(DATA_DIR, 'static')
+MEDIA_URL = STATIC_URL + '/media/' 
+DATA_DIR = '/opt/pagems-assets/'
+STATIC_ROOT = os.path.join(DATA_DIR, STATIC_URL.strip("/"))
+MEDIA_ROOT = os.path.join(DATA_DIR, MEDIA_URL.strip("/"))
+
 
 # STATICFILES_DIRS = (
 #     os.path.join('/opt/static/', 'pincode_admin', 'static'),
