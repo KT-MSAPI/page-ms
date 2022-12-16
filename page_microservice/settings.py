@@ -181,14 +181,9 @@ CACHE_MIDDLEWARE_KEY_PREFIX = PROJECT_APP
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
 MEDIA_URL = STATIC_URL + '/media/' 
-<<<<<<< HEAD
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, *MEDIA_URL.strip("/").split("/"))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
 
-=======
-MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
-STATIC_ROOT = os.path.join(DATA_DIR, 'static')
->>>>>>> c366b55ec1d8e6428a785ba4d55cf47fb15c42e7
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
