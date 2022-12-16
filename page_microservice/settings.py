@@ -180,7 +180,7 @@ CACHE_MIDDLEWARE_KEY_PREFIX = PROJECT_APP
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
+MEDIA_URL = STATIC_URL + '/media/' 
 MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
 STATIC_ROOT = os.path.join(DATA_DIR, 'static')
 # Absolute path to the directory static files should be collected to.
